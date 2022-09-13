@@ -17,9 +17,9 @@ def majority_vote_classifier(infile, outfile):
 
         for i in range(len(data)):
             if (data[i, col_num] == 0):
-                cnt_0 = cnt_0 + 1
+                cnt_0 += 1
             else:
-                cnt_1 = cnt_1 + 1
+                cnt_1 += 1
                 
         if (cnt_1 > cnt_0):
             return 1
@@ -28,6 +28,7 @@ def majority_vote_classifier(infile, outfile):
         else:
             predict(data, col_num-1)
 
+    #Using the last column to run the majority classifier
     prediction = predict(data_train, -1)
 
     #Calculating the training error rate
@@ -35,7 +36,7 @@ def majority_vote_classifier(infile, outfile):
         res = 0
         for i in range(len(data)):
             if(int(data[i,-1]) != prediction):
-                res = res + 1
+                res += 1
         return (res/len(data))
 
     error_train = error_cal (data_train, prediction)
