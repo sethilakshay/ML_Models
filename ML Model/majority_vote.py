@@ -4,7 +4,7 @@ import numpy as np
 def majority_vote_classifier(infile, outfile):
     #Reading in the data
     data_train = np.genfromtxt(infile, delimiter="\t", dtype=None, encoding=None)
-    data_test = data = np.genfromtxt(outfile, delimiter="\t", dtype=None, encoding=None)
+    data_test  = np.genfromtxt(outfile, delimiter="\t", dtype=None, encoding=None)
 
     #Slicing the data removing header columns
     data_train = data_train[1:]
