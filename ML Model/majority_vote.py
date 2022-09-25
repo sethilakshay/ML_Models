@@ -1,3 +1,13 @@
+
+"""
+Written by Lakshay Sethi
+
+Sharing the code for academic and viewing purposes only!
+Prior permission is needed before re-using any part of this code.
+Please contact: sethilakshay13@gmail.com for more information.
+
+"""
+
 import sys
 import numpy as np
 
